@@ -1,4 +1,39 @@
 #mostra as acoes na tela # responsavel: Constante
 
 class MostrarJogo:
-    def __init__(self):
+    def cabecalho():
+    
+        ...
+    return ...
+
+
+    def mostrar_boneco():
+        
+        ...
+    return ...
+
+
+    def mostrar_vidas(vidas_atual):
+        
+        ...
+    return ...
+
+
+    def mostrar_palavra(palavra):
+        
+        ...
+    return ...
+
+
+    def mostrar_letras_usadas(letras_usadas):
+        
+        ...
+    return ...
+
+
+    def mostrar_status(status):
+        
+        ...
+    return ...
+    
+    
