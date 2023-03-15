@@ -2,38 +2,26 @@
 
 class MostrarJogo:
     def cabecalho():
-    
-        ...
-    return ...
+        return print(120*"-"), print("|", 50*" ","JOGO DA FORCA",51*" " ,"|"), print(120*"-")
 
 
     def mostrar_boneco():
-        
-        ...
-    return ...
+        return print()
 
 
     def mostrar_vidas(vidas_atual):
-        
-        ...
-    return ...
+        return print()
 
 
     def mostrar_palavra(palavra):
-        
-        ...
-    return ...
+        return print()
 
 
     def mostrar_letras_usadas(letras_usadas):
-        
-        ...
-    return ...
+        return print()
 
 
     def mostrar_status(status):
-        
-        ...
-    return ...
+        return print()
     
-    
+MostrarJogo.cabecalho()    
