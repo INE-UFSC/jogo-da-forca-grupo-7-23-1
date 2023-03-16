@@ -1,3 +1,3 @@
-# jogo-da-forca-grupo-7-23-1
+#JOGO DA FORCA - GRUPO 7 | 23-1
 
-jogo da forca de progamação orientada a objetos 2
+Programação simples de um jogo da forca para entrega referente a uma tarefa.
