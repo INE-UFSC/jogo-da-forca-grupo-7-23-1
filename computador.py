@@ -4,20 +4,25 @@ import random
 
 class Computador:
     def __init__(self):
-        self.palavra = escolhe_palavra()
+        self.palavra = "aviao"
 
     def tamanho_palavra(self):
         """@return tamanho da palavra"""
 
         return len(self.palavra)
 
-    def tentar_letra(self, letra):
+    def tentar_letra(self, letra, palavra_mostrar):
         """@return se a letra existe na palavra"""
+        acertou = False
+        #num_letras = self.palavra.count(letra)
+        for i in range(len(self.palavra)):
+            if self.palavra[i] == letra:
+                palavra_mostrar[i] = letra 
+                acertou = True
+        #self.palavra.replace(letra, '')
 
-        num_letras = self.palavra.count(letra)
-        self.palavra.replace(letra, '')
-
-        return num_letras > 0
+        #return num_letras > 0
+        return acertou
 
     def ganhou(self):
         self.palavra = ''

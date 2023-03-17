@@ -8,11 +8,11 @@ from jogador import *
 def main():
     while True:
         Jogador1 = Jogador(6, '', '')
-        palavra_mostrar = '_' * Computador().tamanho_palavra()
-        palavra_original = Computador().palavra
+        palavra_original = "aviao"
+        palavra_mostrar = ['_'] * Computador().tamanho_palavra()
         #PROBLEMA: TODA VEZ QUE A CLASSE COMPUTADOR É INSTANCIADA UMA NOVA PALAVRA É RANDOMIZADA
 
-        while Jogador1.vidas > 0 and Computador().palavra != '':
+        while Jogador1.vidas > 0 and list(palavra_original) != palavra_mostrar:
         
             MostrarJogo.mostrar_cabecalho()
             MostrarJogo.mostrar_boneco(Jogador1.vidas)
@@ -24,8 +24,9 @@ def main():
             letra_palpite = input()
             setattr(Jogador1, 'letra_atual', letra_palpite)
             x, status_letra_usada = Jogador1.usar_letra()
-        
-            if Computador().tentar_letra(letra_palpite):
+
+            acertou = Computador().tentar_letra(letra_palpite, palavra_mostrar)
+            if acertou:
                 status_letra_correta = True
                 #alguma maneira de trocar os underlines específicos pela letra_palpite na palavra_mostrar
             else:
@@ -34,7 +35,7 @@ def main():
 
             limpar()
 
-        if Computador().palavra == '':
+        if list(palavra_original) == palavra_mostrar:
             ganhou = True
         if Jogador1.vidas == 0:
             ganhou = False
