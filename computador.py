@@ -1,10 +1,11 @@
 #gerencia o estado do jogo #Responsavel: Casotti
 
 import random
+from gerador_palavras import escolhe_palavra
 
 class Computador:
-    def __init__(self):
-        self.palavra = "aviao"
+    def __init__(self,palavra):
+        self.palavra = palavra
 
     def tamanho_palavra(self):
         """@return tamanho da palavra"""
@@ -24,49 +25,3 @@ class Computador:
     def ganhou(self):
         self.palavra = ''
 
-palavras = [
-    "Amarelo",
-    "Amiga",
-    "Amor",
-    "Ave",
-    "Avião",
-    "Avó",
-    "Balão",
-    "Bebê",
-    "Bolo",
-    "Branco",
-    "Cama",
-    "Caneca",
-    "Celular",
-    "Céu",
-    "Clube",
-    "Copo",
-    "Doce",
-    "Elefante",
-    "Escola",
-    "Estojo",
-    "Faca",
-    "Foto",
-    "Garfo",
-    "Geleia",
-    "Girafa",
-    "Janela",
-    "Limonada",
-    "Mãe",
-    "Meia",
-    "Noite",
-    "Óculos",
-    "ônibus",
-    "Ovo",
-    "Pai",
-    "Pão",
-    "Parque",
-    "Passarinho",
-    "Peixe",
-    "Pijama",
-    "Rato",
-    "Umbigo"
-]
-
-def escolhe_palavra():
-    return palavras[random.randint(0, len(palavras)-1)]
