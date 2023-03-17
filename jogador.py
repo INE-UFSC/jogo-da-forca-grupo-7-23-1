@@ -1,9 +1,9 @@
 # gerencia as açoes do jogador #Responsavel: Girotto
 
 class Jogador:
-    def __init__(self,vidas,letras_usadas,letra_atual):
+    def __init__(self,vidas,letras_usadas=[],letra_atual=''):
         self.vidas=vidas
-        self.letras_usadas=letras_usadas
+        self.letras_usadas=list(letras_usadas)
         self.letra_atual=letra_atual
 
     def reset_vida(self):
