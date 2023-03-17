@@ -76,14 +76,14 @@ class MostrarJogo:
         for b, palavra in enumerate(palavra_atual): print(f" {palavra}\n")
 
 
-    def mostrar_status(status_letras_usadas = False, status_letras_corretas = False, ganhou = False, palavra_secreta = ["teste"], vidas_atual = 6):
+    def mostrar_status(status_letras_usadas = False, status_letras_corretas = False, ganhou = 0, palavra_secreta = ["teste"], vidas_atual = 6):
         if status_letras_usadas == True:
             print("\n\033[0;31mEsta letra já foi sugerida. Tente novamente.")
         
-        if status_letras_corretas == True:
+        elif status_letras_corretas == True:
             print("\n\033[0;32mParabéns, esta letra existe na palavra secreta.")
             
-        if ganhou == True:
+        if ganhou == 1:
             print("\n\033[0;32mParabéns!!! Você venceu!!!\n")
-        else:
+        elif ganhou == 2:
             print(f"\n\033[0;31mQue pena, você perdeu!!! A palavra secreta era: {palavra_secreta[0]}\n")

@@ -14,14 +14,11 @@ class Computador:
     def tentar_letra(self, letra, palavra_mostrar):
         """@return se a letra existe na palavra"""
         acertou = False
-        #num_letras = self.palavra.count(letra)
         for i in range(len(self.palavra)):
             if self.palavra[i] == letra:
                 palavra_mostrar[i] = letra 
                 acertou = True
-        #self.palavra.replace(letra, '')
-
-        #return num_letras > 0
+        
         return acertou
 
     def ganhou(self):
