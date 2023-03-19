@@ -11,7 +11,6 @@ def main():
         Jogador1 = Jogador(6, '', '')
         palavra_original = escolhe_palavra()
         palavra_mostrar = ['_'] * Computador(palavra_original).tamanho_palavra()
-        #PROBLEMA: TODA VEZ QUE A CLASSE COMPUTADOR É INSTANCIADA UMA NOVA PALAVRA É RANDOMIZADA
         status_letra_correta = False
         status_letra_usada = False
 
@@ -24,7 +23,7 @@ def main():
             MostrarJogo.mostrar_palavra(palavra_mostrar)
             MostrarJogo.mostrar_status(status_letra_usada, status_letra_correta, 0, palavra_original, Jogador1.vidas) #PROBLEMA: ROUNDS INTERMEDIÁRIOS TEM MENSAGEM DE DERROTA
 
-            letra_palpite = input('\n\n\033[0;33mInsira uma letra [Ctrl + C para parar: ').lower()
+            letra_palpite = input('\n\n\033[0;33mInsira uma letra: ').lower()
             setattr(Jogador1, 'letra_atual', letra_palpite)
             x, status_letra_usada = Jogador1.usar_letra()
 
@@ -48,7 +47,11 @@ def main():
         MostrarJogo.mostrar_letras_usadas(Jogador1.letras_usadas)
         MostrarJogo.mostrar_palavra(palavra_mostrar)
         MostrarJogo.mostrar_status(False, False, ganhou, [palavra_original], Jogador1.vidas)
-
+    
+        continuar = str(input("\n\n\033[0;34mVocê deseja jogar novamente? [S/N] -> ")[0].lower())
+        if continuar == 'n':
+            break
+    
 
 def limpar():
     if os.name == 'nt':
